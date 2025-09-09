@@ -29,7 +29,7 @@
  ![alt text](./images/image-2.png)
 
 
-### **A one-page reflection of Why is DevOps is necessary with examples**
+### **A one-page reflection of Why DevOps is necessary with examples**
 ---
 DevOps is necessary because it bridges the gap between the software development team and the operations team. making software deployment faster to the end users and free from human error. 
 
