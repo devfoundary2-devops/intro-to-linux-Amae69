@@ -44,3 +44,5 @@ Another key example while devops is necesary is that, DevOps promotes cross-func
 Ultimately, DevOps is both a cultural and technical approach that improves speed, quality, and reliable software applications.
 
 ### **END OF ASSIGNMENT**
+
+
