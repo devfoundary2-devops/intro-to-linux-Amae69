@@ -9,24 +9,24 @@
 
   See screenshot of of local stack :
 
-  ![local stack](image-3.png)
+  ![local stack](./images/image-3.png)
 
 - **Run nginx container**  
 
   Run: `docker run --name nginx-lab -p 8080:80 -d nginx:latest`
 
-  ![Run nginx container](image.png)
+  ![Run nginx container](./images/image.png)
 
 - **Confirm my nginx container is running on port 8080**
 
   Run: `docker ps`
 
-  ![confirm nginx container](image.png)
+  ![confirm nginx container](./images/image.png)
 
 - Confirm on my browser that **nginx** container is running
  on my browser i paste http://localhost:8080
 
- ![alt text](image-2.png)
+ ![alt text](./images/image-2.png)
 
 
 ### **A one-page reflection of Why is DevOps is necessary with examples**
