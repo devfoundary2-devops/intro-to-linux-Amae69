@@ -37,6 +37,8 @@ done
 
 logfile="/var/log/sysmon.log"
 
+NET_IF=$(ip -o link show | awk -F': ' '!/lo/ {print $2; exit}')
+
 while true; do
   echo "--- $(date) ---" >> $logfile
 
@@ -49,9 +51,8 @@ while true; do
   echo "DISK:" >> $logfile
   df -h / >> $logfile
 
-  # Network usage (eth0 may differ, use `ip a` to check your interface name)
-  echo "NET:" >> $logfile
-  ifstat -i eth0 1 1 | tail -n 1 >> $logfile
+  echo "NET ($NET_IF):" >> $logfile
+  grep $NET_IF /proc/net/dev >> $logfile
 
   echo "" >> $logfile
   sleep 300   # 300 seconds = 5 minutes
@@ -62,6 +63,20 @@ done
 
   Run: `chmod +x sysmon.sh`
 
-- Run the script
+  ![chmod](./images/chmod.png)
 
-  `sudo ./sysmon.sh &`
+- Run the script : `sudo ./sysmon.sh &`
+
+- Run  `ps aux | grep sysmon` to view the running process
+
+- Run `tail -f /var/log/sysmon.log` to view log output
+
+![syslog](./images/sys%20log.png)
+
+- Run `kill -9 6211` to kill the process
+
+![kill process](./images/kill%20process.png)
+
+Check **README.MD** file for detail output of the shellm script
+
+### END Of Assignment
